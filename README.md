@@ -1,8 +1,8 @@
 # Fake Store Front
 
-Proyecto de tienda online frontend desarrollado con HTML, CSS, Bootstrap y JavaScript vanilla. Consume la API pública [Fake Store API](https://fakestoreapi.com/) para mostrar productos, detalle de producto y carrito de compras.
+Frontend e-commerce project built with HTML, CSS, Bootstrap, and vanilla JavaScript. It consumes the public [Fake Store API](https://fakestoreapi.com/) to display products, product details, and a shopping cart.
 
-## Tecnologías
+## Technologies
 
 - HTML5
 - CSS3
@@ -10,59 +10,59 @@ Proyecto de tienda online frontend desarrollado con HTML, CSS, Bootstrap y JavaS
 - JavaScript (ES6+ Modules)
 - [Fake Store API](https://fakestoreapi.com/)
 
-## Estructura del proyecto
+## Project Structure
 
 ```
 fake-store-front/
-├── index.html              # Página principal
-├── assets/                 # Imágenes y recursos estáticos
+├── index.html              # Main / Home page
+├── assets/                 # Images and static resources
 ├── css/
-│   ├── styles.css          # Hoja de estilos principal (importa las demás)
-│   ├── base.css            # Estilos base y variables
-│   ├── components.css      # Estilos de componentes reutilizables
-│   └── pages.css           # Estilos específicos de cada página
+│   ├── styles.css          # Main stylesheet (imports the rest)
+│   ├── base.css            # Base styles and variables
+│   ├── components.css      # Reusable component styles
+│   └── pages.css           # Page-specific styles
 ├── js/
-│   ├── main.js             # Punto de entrada principal de JavaScript
+│   ├── main.js             # Main JavaScript entry point
 │   ├── api/
-│   │   └── products.js     # Funciones para consumir la Fake Store API
+│   │   └── products.js     # Functions to consume the Fake Store API
 │   ├── components/
-│   │   └── navbar.js       # Componente de barra de navegación
+│   │   └── navbar.js       # Navbar component
 │   ├── utils/
-│   │   └── utils.js        # Funciones utilitarias (formateo, filtros, etc.)
-│   └── pages/              # Lógica específica de cada página
+│   │   └── utils.js        # Utility functions (formatting, filtering, etc.)
+│   └── pages/              # Page-specific logic
 └── views/
-    ├── products.html        # Listado de productos
-    ├── product-detail.html  # Detalle de un producto
-    └── cart.html            # Carrito de compras
+    ├── products.html        # Product listing
+    ├── product-detail.html  # Single product detail
+    └── cart.html            # Shopping cart
 ```
 
-## Páginas
+## Pages
 
-| Página | Descripción |
+| Page | Description |
 |---|---|
-| `index.html` | Página principal / Home |
-| `views/products.html` | Listado de todos los productos |
-| `views/product-detail.html` | Detalle de un producto seleccionado |
-| `views/cart.html` | Carrito de compras |
+| `index.html` | Home page |
+| `views/products.html` | Full product listing |
+| `views/product-detail.html` | Selected product detail |
+| `views/cart.html` | Shopping cart |
 
-## Cómo ejecutar el proyecto
+## Getting Started
 
-1. Clona el repositorio:
+1. Clone the repository:
    ```bash
-   git clone https://github.com/TU_USUARIO/fake-store-front.git
+   git clone https://github.com/YOUR_USERNAME/fake-store-front.git
    ```
 
-2. Abre el proyecto en tu editor de código.
+2. Open the project in your code editor.
 
-3. Abre el archivo `index.html` en tu navegador, o usa una extensión como **Live Server** en VS Code para levantarlo localmente.
+3. Open `index.html` in your browser, or use the **Live Server** extension in VS Code to run it locally.
 
-> No requiere instalación de dependencias ni servidor backend.
+> No dependencies or backend server required.
 
-## API utilizada
+## API
 
-Este proyecto consume [Fake Store API](https://fakestoreapi.com/), una API REST gratuita que provee datos de productos, categorías y carritos de compra para proyectos de práctica.
+This project uses the [Fake Store API](https://fakestoreapi.com/), a free REST API that provides product, category, and cart data for practice projects.
 
-Ejemplo de endpoint utilizado:
+Example endpoint:
 ```
 GET https://fakestoreapi.com/products
 ```
