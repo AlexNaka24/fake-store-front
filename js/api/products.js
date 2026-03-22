@@ -1,0 +1,1 @@
+// Fetch products from the API and display them on the page

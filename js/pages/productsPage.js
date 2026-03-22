@@ -1,0 +1,1 @@
+// File to handle the the products page functionality
