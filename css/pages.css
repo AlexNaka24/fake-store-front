@@ -1,5 +1,67 @@
 /* Pages is a file for page-specific styles */
 
+/* --- HOME PAGE --- */
+.hero {
+  min-height: 90vh;
+  background-image: 
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url('/assets/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 400;
+  color: var(--color-surface);
+  line-height: 1.1;
+  margin-bottom: 2.5rem;
+}
+
+.btn-hero {
+  display: inline-block;
+  padding: 0.85rem 2.5rem;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-hero:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.home-tagline {
+  text-align: center;
+  padding: 4rem 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
 /* --- PRODUCTS PAGE --- */
 .products-page-header {
   margin-bottom: 2rem;
