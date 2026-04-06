@@ -1,1 +1,23 @@
 /* Base is a file for global styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --color-bg: #f9f7f4;
+  --color-primary: #1a1a1a;
+  --color-accent: #c9a96e;
+  --color-text-muted: #6b6b6b;
+  --color-surface: #ffffff;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: var(--font-body);
+  color: var(--color-primary);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+}

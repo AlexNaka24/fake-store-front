@@ -7,5 +7,3 @@ export function getProducts() {
 
     return res
 }
-
-
