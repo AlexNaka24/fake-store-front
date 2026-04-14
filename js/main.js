@@ -2,8 +2,11 @@
 // This file will initialize the application, set up event listeners, and manage the overall flow of the app
 // Import necessary modules
 
-import {renderNavbar} from "./components/navbar.js"
-renderNavbar()
+import { renderNavbar } from "./components/navbar.js";
+import { renderFooter } from "./components/footer.js";
+
+renderNavbar();
+renderFooter();
 
 window.addEventListener("storage", (e) => {
     if (e.key === "fakestore_cart") {

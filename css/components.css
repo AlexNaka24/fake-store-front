@@ -87,3 +87,79 @@
   line-clamp: 3;
   overflow: hidden;
 }
+
+/* --- FOOTER --- */
+.site-footer {
+  background-color: var(--color-primary);
+  color: #b0a99f;
+  padding: 4rem 0 2rem;
+  margin-top: 5rem;
+}
+
+.footer-brand {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-surface);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  transition: color 0.2s;
+}
+
+.footer-brand:hover {
+  color: var(--color-accent);
+}
+
+.footer-tagline {
+  font-size: 0.85rem;
+  color: #908880;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+
+.footer-heading {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-surface);
+  margin-bottom: 1rem;
+}
+
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-link {
+  font-size: 0.9rem;
+  color: #908880;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: var(--color-accent);
+}
+
+.footer-bottom {
+  border-top: 1px solid #2e2e2e;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.footer-copy {
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: #605a55;
+  margin: 0;
+}
