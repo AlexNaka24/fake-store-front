@@ -265,7 +265,6 @@
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  position: relative;
   padding-bottom: 1.25rem;
   border-bottom: 1px solid #f0ece6;
 }
@@ -336,16 +335,15 @@
   margin: 0;
 }
 .cart-sidebar-remove {
-  position: absolute;
-  top: 0;
-  right: 0;
   background: none;
   border: none;
-  font-size: 1.2rem;
   color: var(--color-text-muted);
   cursor: pointer;
   padding: 0;
-  line-height: 1;
+  flex-shrink: 0;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
   transition: color 0.2s;
 }
 .cart-sidebar-remove:hover { color: #c0392b; }
