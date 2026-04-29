@@ -9,7 +9,7 @@ renderNavbar();
 renderFooter();
 
 window.addEventListener("storage", (e) => {
-    if (e.key === "fakestore_cart") {
-        renderNavbar();
-    }
-}) 
+  if (e.key === "fakestore_cart") {
+    renderNavbar();
+  }
+});
