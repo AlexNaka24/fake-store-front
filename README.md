@@ -1,5 +1,7 @@
 # Fake Store Front
 
+Open it in server mode with live server to see the full functionality, as it uses JavaScript modules and fetches data from an external API.
+
 Frontend e-commerce project built with HTML, CSS, Bootstrap, and vanilla JavaScript. It consumes the public [Fake Store API](https://fakestoreapi.com/) to display products, product details, and a shopping cart.
 
 ## Technologies
