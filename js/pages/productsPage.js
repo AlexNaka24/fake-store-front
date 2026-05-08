@@ -2,6 +2,8 @@
 
 import { getProducts } from "../api/products.js";
 
+const rootUrl = new URL('../../', import.meta.url).href;
+
 getProducts().then((products) => {
     const productsList = document.getElementById("products-list");
     const searchForm = document.getElementById("search-form");
@@ -12,7 +14,7 @@ getProducts().then((products) => {
         filteredProducts.forEach(p => {
             let template = `
             <div class="col">
-                <a href="/views/product-detail.html?id=${p.id}" class="text-decoration-none">
+                <a href="${rootUrl}views/product-detail.html?id=${p.id}" class="text-decoration-none">
                     <div class="card">
                         <img src="${p.image}" class="card-img-top" alt="${p.title}">
                         <div class="card-body">

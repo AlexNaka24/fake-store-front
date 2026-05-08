@@ -3,6 +3,8 @@
 import { getCart, removeFromCart, updateQuantity, getCartCount, getCartTotal, clearCart } from "../storage/storage.js";
 import { updateCartBadge } from "../components/cartSidebar.js";
 
+const rootUrl = new URL('../../', import.meta.url).href;
+
 function renderCart() {
     const cart = getCart();
     const cartItemsEl = document.getElementById("cart-items");
@@ -16,7 +18,7 @@ function renderCart() {
         cartItemsEl.innerHTML = `
             <div class="cart-empty">
                 <p>Your cart is empty.</p>
-                <a href="/views/products.html" class="btn-add-to-cart">Shop Now</a>
+                <a href="${rootUrl}views/products.html" class="btn-add-to-cart">Shop Now</a>
             </div>
         `;
         return;
@@ -24,12 +26,12 @@ function renderCart() {
 
     cartItemsEl.innerHTML = cart.map(item => `
         <div class="cart-item" data-id="${item.id}">
-            <a href="/views/product-detail.html?id=${item.id}">
+            <a href="${rootUrl}views/product-detail.html?id=${item.id}">
                 <img src="${item.image}" alt="${item.title}" class="cart-item-img">
             </a>
             <div class="cart-item-info">
                 <p class="cart-item-category">${item.category}</p>
-                <a href="/views/product-detail.html?id=${item.id}" class="cart-item-title">${item.title}</a>
+                <a href="${rootUrl}views/product-detail.html?id=${item.id}" class="cart-item-title">${item.title}</a>
                 <p class="cart-item-price">$${item.price.toFixed(2)}</p>
             </div>
             <div class="cart-item-controls">

@@ -5,6 +5,8 @@ import { getProducts } from "../api/products.js";
 import { addToCart } from "../storage/storage.js";
 import { updateCartBadge, showToast } from "../components/cartSidebar.js";
 
+const rootUrl = new URL('../../', import.meta.url).href;
+
 const params = new URLSearchParams(window.location.search);
 const productId = params.get("id");
 
@@ -50,7 +52,7 @@ if (productId) {
         loadRecommendations(p.id, p.category);
     });
 } else {
-    window.location.href = "/views/products.html";
+    window.location.href = `${rootUrl}views/products.html`;
 }
 
 document.getElementById("btn-add-to-cart").addEventListener("click", () => {
@@ -85,7 +87,7 @@ function loadRecommendations(currentId, currentCategory) {
 
         const html = picks.map(p => `
             <div class="col">
-                <a href="/views/product-detail.html?id=${p.id}" class="text-decoration-none">
+                <a href="${rootUrl}views/product-detail.html?id=${p.id}" class="text-decoration-none">
                     <div class="card recommendation-card">
                         <img src="${p.image}" class="card-img-top recommendation-img" alt="${p.title}">
                         <div class="card-body p-3">
