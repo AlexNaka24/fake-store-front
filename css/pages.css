@@ -30,7 +30,7 @@
   min-height: 90vh;
   background-image: 
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url('/assets/hero-bg.jpg');
+    url('../assets/hero-bg.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
