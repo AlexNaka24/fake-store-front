@@ -1,0 +1,9 @@
+services:
+  fake-store-front:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fake-store-front
+    ports:
+      - "8080:80"
+    restart: unless-stopped
