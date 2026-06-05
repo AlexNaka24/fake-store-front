@@ -1,0 +1,57 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate required files exist
+        run: |
+          test -f index.html
+          test -f Dockerfile
+          test -f docker-compose.yml
+          test -f views/products.html
+          test -f views/product-detail.html
+          test -f views/cart.html
+          test -f js/main.js
+          test -f js/api/products.js
+          test -f js/storage/storage.js
+          echo "All required files exist"
+
+      - name: Validate HTML structure
+        run: |
+          for file in index.html views/products.html views/product-detail.html views/cart.html; do
+            grep -q "<html" "$file"
+            grep -q "<body" "$file"
+            echo "$file OK"
+          done
+
+      - name: Validate docker compose config
+        run: docker compose config
+
+      - name: Build Docker image
+        run: docker build -t fake-store-front .
+
+      - name: Start container
+        run: docker compose up -d
+
+      - name: Wait for container to be ready
+        run: sleep 5
+
+      - name: Test app
+        run: |
+          curl --fail http://localhost:8080
+          echo "App is reachable on port 8080"
+
+      - name: Stop containers
+        if: always()
+        run: docker compose down
